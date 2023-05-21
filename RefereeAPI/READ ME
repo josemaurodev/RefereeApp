@@ -38,4 +38,4 @@ Nuget:
         - Microsoft.EntityframeWork.SqlLite
         - Microsoft.EntityframeWork.Design
             - If you'r in the VSCode you'r going to need to add on extension to be able to install this Nuget Packages. The one that I'm running myself is NuGet Gallery, from pcislo.
-        - The third one you should install via "https://www.nuget.org/packages/dotnet-ef/", the .NET CLI(global) version.
+        - The third one you should install via "https://www.nuget.org/packages/dotnet-ef/", the .NET CLI(global) version
