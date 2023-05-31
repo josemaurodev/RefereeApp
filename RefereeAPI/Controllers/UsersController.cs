@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RefereeAPI.Data;
@@ -5,9 +6,9 @@ using RefereeAPI.Entities;
 
 namespace RefereeAPI.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")] // GET /api/users
-    public class UsersController : ControllerBase
+     // GET /api/users
+     [Authorize]
+    public class UsersController : BaseApiController
     {
         //to be able to move in our database, we should use dependency injection, and thats what we're doing here
         private readonly DataContext _context;
@@ -17,7 +18,7 @@ namespace RefereeAPI.Controllers
             _context = context;
         }
 
-
+        [AllowAnonymous]
         [HttpGet]
 
         //WE USE TASK BECAUSE OF THE ANOLOGY OF THE RESTAURANT, WHERE THE WAITER CAN GRAB MORE THAN ONE REQUEST AT A TIME, AND IT WILL BE NOTIFIED WHEN THE REQUEST IS DONE
@@ -29,7 +30,7 @@ namespace RefereeAPI.Controllers
             return users;
         }
 
-
+        
         [HttpGet("{id}")]
         public async Task<ActionResult<AppUser>> GetUser(int id)
         {
