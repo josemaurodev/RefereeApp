@@ -10,4 +10,4 @@ namespace RefereeAPI.DTOs
         [Required]
         public string Password { get; set; }
     }
-}
+}   

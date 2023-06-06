@@ -39,3 +39,30 @@ Nuget:
         - Microsoft.EntityframeWork.Design
             - If you'r in the VSCode you'r going to need to add on extension to be able to install this Nuget Packages. The one that I'm running myself is NuGet Gallery, from pcislo.
         - The third one you should install via "https://www.nuget.org/packages/dotnet-ef/", the .NET CLI(global) version
+
+--------------------------------------------------------------------------------------------- Front-end ------------------------------------------------------------------------------------------
+
+Angular:
+    - To start the project we should use the following command:
+        - "ng serve"
+    - To create something we can use the following command:
+        - "ng g --help": to see what we want to create.
+            - "ng g c nav": to create a component called nav.
+            - "ng g c nav --skip-tests": to create a component called nav without the test component, that it's called spec.ts.
+            - "ng g c nav --skip-tests --dry-run"": TO SEE what we WILL create if the command is runned without the dry run command.
+
+FILES: 
+    - App.component.html: 
+        - Our "index" page. 
+
+    - Every .html file is the "front end", is actually what you see on the screen. 
+    - Every .ts file is where you put yours functions so they can actually manipulate what's in the screen. 
+
+FOLDERS:
+    - _Services:
+        - Where all the http resquest to the api will be held.
+        - Components are not realiable to store data or important information that our user may have, 'cause there are destroyed with the information that they are holding 
+        every time the users switch between a component. That's why we use services, 'cause it will be destroyed only when our user exit/close the application.
+
+    - Nav:
+        - Where our navbar is stored and where we can edit it. 
